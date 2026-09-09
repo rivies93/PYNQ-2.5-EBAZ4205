@@ -1,0 +1,17 @@
+/include/ "system-conf.dtsi"
+/ {
+amba {
+	ethernet@e000b000 {
+	     status = "okay";
+	     phy-mode = "mii";
+	     phy-handle = <&phy0>;
+	     local-mac-address = [00 0a 35 00 00 00];
+	     phy0: phy@0 {
+		 
+		 reg = <0>;
+		 device_type = "ethernet-phy";
+		 xlnx,phy-type = <5>;
+	     };
+	};
+};
+};
